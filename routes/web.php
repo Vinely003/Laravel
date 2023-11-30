@@ -3,8 +3,7 @@
 use App\Http\Controllers\CountyController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewCityController;
-use App\Http\Controllers\UpdateDeleteController;
+use App\Http\Controllers\CityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +18,6 @@ use App\Http\Controllers\UpdateDeleteController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('county/{county:id}', [CountyController::class, 'search']);
-Route::post('newcity', [NewCityController::class, 'store']);
-Route::put('update/{id}', [UpdateDeleteController::class, 'update']);
-Route::delete('delete/{id}', [UpdateDeleteController::class, 'destroy']);
+Route::post('newcity', [CityController::class, 'store']);
+Route::put('update/{id}', [CityController::class, 'update']);
+Route::delete('delete/{id}', [CityController::class, 'destroy']);
