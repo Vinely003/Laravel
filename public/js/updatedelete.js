@@ -26,7 +26,7 @@ $(document).ready(function () {
         e.stopPropagation();
         let cityId = $(this).data('cityid');
         let td = $(this).closest('td');
-        let text = td.find('.text');
+        // let text = td.find('.text');
         let input = td.find('.input');
         let cityData = {
             name: input.val(),
