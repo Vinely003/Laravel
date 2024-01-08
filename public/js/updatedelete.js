@@ -29,7 +29,7 @@ $(document).ready(function () {
         let text = td.find('.text');
         let input = td.find('.input');
         let cityData = {
-            name: $('.input').val(),
+            name: input.val(),
         };
 
         $.ajax({
@@ -41,10 +41,10 @@ $(document).ready(function () {
                 window.location.reload();
             }
         });
-        text.text(input.val());
-        text.show;
-        td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').hide();
-        td.find('.text').show();
+        // text.text(input.val());
+        // text.show();
+        // td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').hide();
+        // td.find('.text').show();
     });
 
     $('#table').on('click', '.cancelBtn', function (e) {
