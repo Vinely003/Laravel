@@ -39,12 +39,11 @@ $(document).ready(function () {
             data: cityData,
             success: function () {
                 window.location.reload();
+                // text.text(input.val());
+                // text.show();
+                // td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').hide();
             }
         });
-        // text.text(input.val());
-        // text.show();
-        // td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').hide();
-        // td.find('.text').show();
     });
 
     $('#table').on('click', '.cancelBtn', function (e) {
