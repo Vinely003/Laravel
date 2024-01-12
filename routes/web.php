@@ -18,6 +18,8 @@ use App\Http\Controllers\CityController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('county/{county:id}', [CountyController::class, 'search']);
-Route::post('newcity', [CityController::class, 'store']);
-Route::put('update/{id}', [CityController::class, 'update']);
-Route::delete('delete/{id}', [CityController::class, 'destroy']);
+Route::controller(CityController::class)->group(function () {
+    Route::post('newcity', 'store');
+    Route::put('update/{id}', 'update');
+    Route::delete('delete/{id}', 'destroy');
+});
