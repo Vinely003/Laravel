@@ -9,7 +9,7 @@ class CountyController extends Controller
     public function search(County $county)
     {
         return view('counties-cities-table', [
-            'city' => $county->cities,
+            'cities' => $county->cities,
             'currentCounty' => $county,
             'countyId' => $county->id,
             'counties' => $county->all()

@@ -5,8 +5,8 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="/">Összes</a>
-        @foreach ($counties as $country)
-            <a class="dropdown-item" href="/county/{{ $country->id }}">{{ $country->name }}</a>
+        @foreach ($counties as $county)
+            <a class="dropdown-item" href="/county/{{ $county->id }}">{{ $county->name }}</a>
         @endforeach
     </div>
 </div>

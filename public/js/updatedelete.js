@@ -3,8 +3,8 @@ $(document).ready(function () {
     $('#table').on('click', '.text', function () {
         let td = $(this).closest('td');
         td.find('.text').hide();
-        td.find('.input').val($(this).text()).show().focus();
-        td.find('.updateBtn, .deleteBtn, .cancelBtn').show();
+        td.find('.input').val($(this).text()).removeClass('d-none').focus();
+        td.find('.updateBtn, .deleteBtn, .cancelBtn').removeClass('d-none');
     });
 
     $('#table').on('click', '.deleteBtn', function (e) {
@@ -49,7 +49,7 @@ $(document).ready(function () {
     $('#table').on('click', '.cancelBtn', function (e) {
         e.stopPropagation();
         let td = $(this).closest('td');
-        td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').hide();
+        td.find('.input, .updateBtn, .deleteBtn, .cancelBtn').addClass('d-none');
         td.find('.text').show();
     });
 });

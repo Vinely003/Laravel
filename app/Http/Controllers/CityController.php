@@ -18,7 +18,7 @@ class CityController extends Controller
 
     public function update($id)
     {
-        $city = City::findorFail($id);
+        $city = City::findOrFail($id);
 
         $city->fill(request()->all());
         $city->save();
@@ -28,7 +28,7 @@ class CityController extends Controller
 
     public function destroy($id)
     {
-        $city = City::findorFail($id);
+        $city = City::findOrFail($id);
 
         $city->delete();
 

@@ -2,9 +2,11 @@
 <div class="col-6 mx-auto p-4">
     <table class="table table-striped">
         <thead>
-            <th id="name" scope="col">
-                Összes város
-            </th>
+            <tr>
+                <th id="name" scope="col">
+                    Összes város
+                </th>
+            </tr>
         </thead>
         <tbody>
             @foreach ($cities as $city)

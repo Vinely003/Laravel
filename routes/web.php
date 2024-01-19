@@ -17,7 +17,7 @@ use App\Http\Controllers\CityController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('county/{county:id}', [CountyController::class, 'search']);
+Route::get('county/{county}', [CountyController::class, 'search']);
 Route::controller(CityController::class)->group(function () {
     Route::post('newcity', 'store');
     Route::put('update/{id}', 'update');
