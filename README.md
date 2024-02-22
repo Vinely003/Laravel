@@ -12,10 +12,16 @@ Be kell állítani a következőket a ```.env```-en belül.
 Többi beállítás marad alapértelmezett.
 
 ## Terminálban
-### Függőségek letöltése, Migrációk elindítása
+### Kulcs készítése
+```bash
+$ php artisan key:generate
+```
+### Függőségek letöltése
 ```bash
 $ composer install
-...
+```
+### Migráció/Adatbázis feltöltés
+```bash 
 $ php artisan migrate
 ...
 $ php artisan db:seed
