@@ -1,25 +1,26 @@
 <x-layout>
-    <section class="bg-dark text-light p-3 mx-auto" style="width: 50%">
+    <section class="bg-dark text-light p-3 mx-auto rounded" style="width: 30%">
         <main>
-            <form action="/login" method="POST">
+            <form action="/logingin" method="POST">
                 @csrf
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" value="{{ old('email') }}" required>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control"
+                        required>
                     @error('email')
                         <p class="text-danger p-2">{{ $message }}</p>
                     @enderror
                 </div>
-                <div>
-                    <label for="password">Jelszó:</label>
-                    <input type="password" name="password" id="password">
+                <div class="mb-3">
+                    <label for="password" class="form-label">Jelszó:</label>
+                    <input type="password" name="password" id="password" class="form-control">
                     @error('password')
                         <p class="text-danger p-2">{{ $message }}</p>
                     @enderror
                 </div>
-                <div>
-                    <button class="btn btn-primary" type="submit">Bejelentkezés</button>
-                    <a href="/" class="btn btn-secondary">Regisztráció</a>
+                <div class="mb-3">
+                    <button class="btn btn-primary btn-block" type="submit">Bejelentkezés</button>
+                    <a href="/" class="btn btn-secondary btn-block">Regisztráció</a>
                 </div>
             </form>
         </main>
