@@ -4,7 +4,7 @@
         Válassz megyét
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/">Összes</a>
+        <a class="dropdown-item" href="/home">Összes</a>
         @foreach ($counties as $county)
             <a class="dropdown-item" href="/county/{{ $county->id }}">{{ $county->name }}</a>
         @endforeach
