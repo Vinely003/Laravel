@@ -1,5 +1,11 @@
 # Beüzemelés
+### Klónozás
+```bash
+$ git clone https://github.com/Vinely003/Laravel.git
+```
 
+## Terminál Gyökérmappában
+### .env beállítás
 ```.env.example```-t le kell másolni ```.env```-nek. 
 ```bash
 $ copy .env.example .env
@@ -11,7 +17,6 @@ Be kell állítani a következőket a ```.env```-en belül.
 ```DB_PASSWORD``` Szerveren megadott jelszó. 
 Többi beállítás marad alapértelmezett.
 
-## Terminálban
 ### Kulcs készítése
 ```bash
 $ php artisan key:generate
