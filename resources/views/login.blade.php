@@ -7,14 +7,14 @@
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" value="{{ old('email') }}" required>
                     @error('email')
-                        {{ $message }}
+                        <p class="text-danger p-2">{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
                     <label for="password">Jelszó:</label>
                     <input type="password" name="password" id="password">
                     @error('password')
-                        {{ $message }}
+                        <p class="text-danger p-2">{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
